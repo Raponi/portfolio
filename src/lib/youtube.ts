@@ -8,6 +8,21 @@ type YouTubeVideo = {
   likeCount: number;
 };
 
+type YouTubeApiItem = {
+  id?: { videoId?: string };
+  snippet: {
+    title: string;
+    description: string;
+    thumbnails?: { high?: { url?: string } };
+    publishedAt: string;
+    resourceId?: { videoId?: string };
+  };
+  statistics?: {
+    viewCount?: string;
+    likeCount?: string;
+  };
+};
+
 const API_KEY = process.env.YOUTUBE_API_KEY;
 const CHANNEL_IDS = {
   techbr: "UC_TechBR",
@@ -29,7 +44,7 @@ async function fetchFromYouTube(url: string): Promise<YouTubeVideo[]> {
 
     const data = await res.json();
 
-    return data.items.map((item: any) => ({
+    return data.items.map((item: YouTubeApiItem) => ({
       id: item.id?.videoId || item.snippet?.resourceId?.videoId,
       title: item.snippet.title,
       description: item.snippet.description,

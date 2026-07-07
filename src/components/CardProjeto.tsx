@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import type { Projeto } from "@/data/projetos";
 
@@ -12,10 +13,11 @@ export default function CardProjeto({ projeto }: Props) {
       className="group block bg-dracula-surface rounded-lg overflow-hidden border border-dracula-border hover:border-dracula-primary transition-all hover:-translate-y-1"
     >
       <div className="aspect-video relative overflow-hidden">
-        <img
+        <Image
           src={projeto.thumbnail}
           alt={projeto.titulo}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          fill
+          className="object-cover group-hover:scale-105 transition-transform duration-300"
         />
         <div className="absolute top-2 left-2 flex gap-2">
           <span className={`px-2 py-0.5 rounded text-xs font-medium ${
