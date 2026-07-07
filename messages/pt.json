@@ -24,7 +24,10 @@
     "nenhum": "Nenhum projeto encontrado.",
     "detalhes_tecnicos": "Detalhes Técnicos",
     "categoria": "Categoria",
-    "data": "Data"
+    "data": "Data",
+    "resultados": "Resultados",
+    "views": "visualizações",
+    "likes": "likes"
   },
   "servicos": {
     "title": "Serviços",

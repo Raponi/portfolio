@@ -78,7 +78,7 @@ export default async function ProjetoPage({ params }: Props) {
               </svg>
               <div>
                 <p className="text-lg font-bold text-dracula-text">{formatNum(projeto.viewCount)}</p>
-                <p className="text-xs text-dracula-muted">visualizações</p>
+                <p className="text-xs text-dracula-muted">{t("views")}</p>
               </div>
             </div>
             <div className="flex items-center gap-2 bg-dracula-surface px-4 py-3 rounded-lg border border-dracula-border">
@@ -87,7 +87,7 @@ export default async function ProjetoPage({ params }: Props) {
               </svg>
               <div>
                 <p className="text-lg font-bold text-dracula-text">{formatNum(projeto.likeCount)}</p>
-                <p className="text-xs text-dracula-muted">likes</p>
+                <p className="text-xs text-dracula-muted">{t("likes")}</p>
               </div>
             </div>
           </div>

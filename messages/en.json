@@ -24,7 +24,10 @@
     "nenhum": "No projects found.",
     "detalhes_tecnicos": "Technical Details",
     "categoria": "Category",
-    "data": "Date"
+    "data": "Date",
+    "resultados": "Results",
+    "views": "views",
+    "likes": "likes"
   },
   "servicos": {
     "title": "Services",
