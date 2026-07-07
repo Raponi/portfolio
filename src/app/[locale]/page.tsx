@@ -1,0 +1,26 @@
+import { getTranslations } from "next-intl/server";
+import Hero from "@/components/Hero";
+import CardProjeto from "@/components/CardProjeto";
+import { projetos } from "@/data/projetos";
+
+export default async function HomePage() {
+  const t = await getTranslations("home");
+
+  const destaques = projetos.slice(0, 3);
+
+  return (
+    <div className="flex flex-col items-center">
+      <Hero />
+      <section className="w-full max-w-6xl px-4 py-16">
+        <h2 className="text-2xl font-bold text-dracula-primary mb-8">
+          {t("destaques")}
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {destaques.map((projeto) => (
+            <CardProjeto key={projeto.slug} projeto={projeto} />
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+}

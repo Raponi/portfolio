@@ -1,0 +1,68 @@
+{
+  "nav": {
+    "home": "Home",
+    "projetos": "Projects",
+    "servicos": "Services",
+    "sobre": "About",
+    "contato": "Contact"
+  },
+  "home": {
+    "title": "Rogerio Barbosa",
+    "subtitle": "Video Editor & Developer",
+    "cta": "View Projects",
+    "hero_desc": "I turn ideas into visual narratives. Video editing, motion graphics, and color grading for digital content.",
+    "destaques": "Featured Projects"
+  },
+  "projetos": {
+    "title": "Projects",
+    "desc": "Selected video editing work.",
+    "todos": "All",
+    "tech": "Tech",
+    "creative": "Creative",
+    "shorts": "Short",
+    "voltar": "← Back to Projects",
+    "detalhes_tecnicos": "Technical Details",
+    "categoria": "Category",
+    "data": "Date"
+  },
+  "servicos": {
+    "title": "Services",
+    "desc": "Complete video editing solutions for digital content.",
+    "edicao": { "title": "Video Editing", "desc": "Narrative editing focused on pacing, clarity, and audience retention. From assembly to final delivery." },
+    "motion": { "title": "Motion Graphics", "desc": "Animations, dynamic text, and visual elements to add personality to your content." },
+    "color": { "title": "Color Grading", "desc": "Color correction and cinematic grading. Professional look for any project." },
+    "finalizacao": { "title": "Audio Post-Production", "desc": "Mixing, voice treatment, SFX, and fine-tuning for clean, professional audio." }
+  },
+  "sobre": {
+    "title": "About",
+    "bio_1": "Freelance video editor based in São Paulo, experienced in digital content for YouTube, TikTok, and video platforms.",
+    "bio_2": "I work with DaVinci Resolve (primary tool), Adobe Premiere, and After Effects, delivering editing that prioritizes narrative clarity, pacing, and efficient visual communication.",
+    "bio_3": "I've edited for tech channels, creative content, and e-commerce. Every project is an opportunity to tell a better story.",
+    "stack_title": "Tech Stack",
+    "ferramentas": "Tools",
+    "experiencia": "Experience",
+    "exp_techbr": "Video Editor — TechBRCanal (2024–Present)",
+    "exp_techbr_desc": "Weekly tech review editing with jump cuts, motion graphics, and dynamic pacing.",
+    "exp_meyflower": "Video Editor — MeyFlower (2023–Present)",
+    "exp_meyflower_desc": "Creative narrative editing with supporting imagery and audience retention structuring.",
+    "exp_mamae": "Video Editor — Super Mamãe (2020–2022)",
+    "exp_mamae_desc": "E-commerce editing, Google Ads campaigns, and social media content."
+  },
+  "contato": {
+    "title": "Contact",
+    "desc": "Let's work together? Send me a message.",
+    "form_title": "Send a Message",
+    "nome": "Name",
+    "email": "Email",
+    "mensagem": "Message",
+    "enviar": "Send",
+    "enviando": "Sending...",
+    "sucesso": "Message sent successfully!",
+    "erro": "Error sending. Please try again.",
+    "email_direto": "Or send me an email directly:",
+    "redes": "Social Media"
+  },
+  "footer": {
+    "direitos": "© 2026 Rogerio Barbosa. All rights reserved."
+  }
+}

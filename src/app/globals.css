@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-dracula-bg: #1a1b26;
+  --color-dracula-surface: #282a36;
+  --color-dracula-elevated: #2d2f42;
+  --color-dracula-border: #44475a;
+  --color-dracula-text: #f8f8f2;
+  --color-dracula-muted: #6272a4;
+  --color-dracula-primary: #bd93f9;
+  --color-dracula-secondary: #8be9fd;
+  --color-dracula-success: #50fa7b;
+  --color-dracula-accent: #ff79c6;
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--color-dracula-bg);
+  color: var(--color-dracula-text);
+  font-family: var(--font-sans);
+}
