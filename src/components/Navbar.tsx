@@ -8,7 +8,6 @@ import { useState } from "react";
 const links = [
   { href: "/", label: "home" },
   { href: "/projetos", label: "projetos" },
-  { href: "/servicos", label: "servicos" },
   { href: "/sobre", label: "sobre" },
   { href: "/contato", label: "contato" },
 ];
@@ -25,7 +24,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-dracula-bg/90 backdrop-blur border-b border-dracula-border">
+    <header className="sticky top-0 z-50 bg-dracula-surface border-b border-dracula-border">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         <Link
           href="/"
@@ -71,8 +70,11 @@ export default function Navbar() {
         </button>
       </div>
 
-      {menuOpen && (
-        <div className="md:hidden border-t border-dracula-border bg-dracula-surface">
+      <div
+        className={`md:hidden border-t border-dracula-border bg-dracula-surface overflow-hidden ${
+          menuOpen ? "animate-slide-down" : "max-h-0 opacity-0 pointer-events-none"
+        }`}
+      >
           <div className="flex flex-col px-4 py-4 gap-3">
             {links.map((link) => (
               <Link
@@ -96,7 +98,6 @@ export default function Navbar() {
             </Link>
           </div>
         </div>
-      )}
     </header>
   );
 }

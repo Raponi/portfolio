@@ -1,22 +1,26 @@
 import { getTranslations } from "next-intl/server";
 import FormContato from "@/components/FormContato";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export default async function ContatoPage() {
   const t = await getTranslations("contato");
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-16">
-      <h1 className="text-3xl font-bold text-dracula-text mb-2">{t("title")}</h1>
-      <p className="text-dracula-muted mb-12">{t("desc")}</p>
+      <h1 className="animate-in text-3xl font-bold text-dracula-text mb-2">{t("title")}</h1>
+      <p className="animate-in animate-in-d1 text-dracula-muted mb-12">{t("desc")}</p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div>
-          <h2 className="text-xl font-semibold text-dracula-text mb-6">{t("form_title")}</h2>
-          <FormContato />
-        </div>
+        <ScrollReveal delay={0}>
+          <div>
+            <h2 className="text-xl font-semibold text-dracula-text mb-6">{t("form_title")}</h2>
+            <FormContato />
+          </div>
+        </ScrollReveal>
 
-        <div>
-          <div className="bg-dracula-surface rounded-lg p-6 border border-dracula-border mb-6">
+        <ScrollReveal delay={100}>
+          <div>
+            <div className="bg-dracula-surface rounded-lg p-6 border border-dracula-border mb-6">
             <h2 className="text-lg font-semibold text-dracula-primary mb-4">{t("redes")}</h2>
             <div className="space-y-3">
               <a

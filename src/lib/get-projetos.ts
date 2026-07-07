@@ -2,6 +2,20 @@ import { projetosSource, type Projeto, type ProjetoSource } from "@/data/projeto
 
 const API_KEY = process.env.YOUTUBE_API_KEY;
 
+function cleanDescription(raw: string): string {
+  const firstLine = raw.split("\n").find((line) => line.trim().length > 0);
+  if (!firstLine) return "";
+
+  const cleaned = firstLine
+    .replace(/https?:\/\/\S+/g, "")
+    .replace(/#\S+/g, "")
+    .replace(/@\S+/g, "")
+    .trim();
+
+  if (cleaned.length > 200) return cleaned.slice(0, 200).trimEnd() + "…";
+  return cleaned;
+}
+
 function parseDuration(iso: string): string {
   const match = iso.match(/PT(\d+H)?(\d+M)?(\d+S)?/);
   if (!match) return "—";
@@ -72,7 +86,7 @@ export async function getProjetos(): Promise<Projeto[]> {
       return {
         ...src,
         titulo: api.snippet.title,
-        descricao: api.snippet.description,
+        descricao: cleanDescription(api.snippet.description),
         thumbnail: api.snippet.thumbnails?.maxres?.url
           || api.snippet.thumbnails?.high?.url
           || `/thumbnails/${src.categoria === "tech" ? "techbr-01.png" : "meyflower-01.png"}`,

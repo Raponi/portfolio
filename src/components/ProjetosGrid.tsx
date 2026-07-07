@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import CardProjeto from "@/components/CardProjeto";
+import ScrollReveal from "@/components/ScrollReveal";
 import type { Projeto } from "@/data/projetos-source";
 
 type Props = {
@@ -42,9 +43,11 @@ export default function ProjetosGrid({ projetos }: Props) {
         ))}
       </div>
 
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filtrados.map((projeto) => (
-          <CardProjeto key={projeto.slug} projeto={projeto} />
+      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+        {filtrados.map((projeto, i) => (
+          <ScrollReveal key={projeto.slug} delay={i * 80}>
+            <CardProjeto projeto={projeto} />
+          </ScrollReveal>
         ))}
       </div>
     </>

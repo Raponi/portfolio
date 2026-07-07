@@ -85,7 +85,7 @@ export default function FormContato() {
         <p className="text-dracula-success text-sm">{t("sucesso")}</p>
       )}
       {status === "error" && (
-        <p className="text-red-400 text-sm">{t("erro")}</p>
+        <p className="animate-shake text-red-400 text-sm">{t("erro")}</p>
       )}
     </form>
   );
