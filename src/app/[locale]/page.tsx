@@ -1,11 +1,11 @@
 import { getTranslations } from "next-intl/server";
+import { getProjetos } from "@/lib/get-projetos";
 import Hero from "@/components/Hero";
 import CardProjeto from "@/components/CardProjeto";
-import { projetos } from "@/data/projetos";
 
 export default async function HomePage() {
   const t = await getTranslations("home");
-
+  const projetos = await getProjetos();
   const destaques = projetos.slice(0, 3);
 
   return (

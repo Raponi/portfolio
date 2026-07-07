@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
-import type { Projeto } from "@/data/projetos";
+import type { Projeto } from "@/data/projetos-source";
 
 type Props = {
   projeto: Projeto;

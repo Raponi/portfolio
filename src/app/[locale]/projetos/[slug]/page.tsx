@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { projetos } from "@/data/projetos";
+import { getProjeto } from "@/lib/get-projetos";
 import VideoPlayer from "@/components/VideoPlayer";
 
 type Props = {
@@ -10,7 +10,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
-  const projeto = projetos.find((p) => p.slug === slug);
+  const projeto = await getProjeto(slug);
 
   if (!projeto) return { title: "Not Found" };
 
@@ -24,7 +24,7 @@ export default async function ProjetoPage({ params }: Props) {
   const { slug, locale } = await params;
   const t = await getTranslations({ locale, namespace: "projetos" });
 
-  const projeto = projetos.find((p) => p.slug === slug);
+  const projeto = await getProjeto(slug);
   if (!projeto) notFound();
 
   return (
@@ -76,11 +76,11 @@ export default async function ProjetoPage({ params }: Props) {
           </div>
           <div>
             <span className="text-dracula-muted">Software:</span>
-            <p className="text-dracula-text">{projeto.detalhes.software}</p>
+            <p className="text-dracula-text">{projeto.software}</p>
           </div>
           <div>
             <span className="text-dracula-muted">Duração:</span>
-            <p className="text-dracula-text">{projeto.detalhes.duracao}</p>
+            <p className="text-dracula-text">{projeto.duracao}</p>
           </div>
         </div>
       </div>
