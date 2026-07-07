@@ -12,6 +12,8 @@ export type Projeto = ProjetoSource & {
   data: string;
   duracao: string;
   software: string;
+  viewCount: number;
+  likeCount: number;
 };
 
 export const projetosSource: ProjetoSource[] = [

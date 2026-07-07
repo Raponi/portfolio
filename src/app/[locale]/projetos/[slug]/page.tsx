@@ -9,6 +9,12 @@ type Props = {
   params: Promise<{ slug: string; locale: string }>;
 };
 
+function formatNum(n: number): string {
+  if (n >= 1_000_000) return (n / 1_000_000).toFixed(1).replace(".0", "") + "M";
+  if (n >= 1_000) return (n / 1_000).toFixed(1).replace(".0", "") + "K";
+  return n.toString();
+}
+
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const projeto = await getProjeto(slug);
@@ -30,26 +36,20 @@ export default async function ProjetoPage({ params }: Props) {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-16">
-      <ScrollReveal>
-        <Link
-          href="/projetos"
-          className="inline-block text-dracula-muted hover:text-dracula-primary transition-colors mb-8"
-        >
-          {t("voltar")}
-        </Link>
-      </ScrollReveal>
+      <Link
+        href="/projetos"
+        className="animate-in inline-block text-dracula-muted hover:text-dracula-primary transition-colors mb-8"
+      >
+        {t("voltar")}
+      </Link>
 
-      <ScrollReveal delay={100}>
-        <div className="aspect-video rounded-lg overflow-hidden border border-dracula-border mb-8">
-          <VideoPlayer youtubeId={projeto.youtubeId} thumbnail={projeto.thumbnail} />
-        </div>
-      </ScrollReveal>
+      <div className="animate-in animate-in-d1 aspect-video rounded-lg overflow-hidden border border-dracula-border mb-8">
+        <VideoPlayer youtubeId={projeto.youtubeId} thumbnail={projeto.thumbnail} />
+      </div>
 
-      <ScrollReveal delay={200}>
-        <h1 className="text-3xl font-bold text-dracula-text mb-2">
-          {projeto.titulo}
-        </h1>
-      </ScrollReveal>
+      <h1 className="animate-in animate-in-d2 text-3xl font-bold text-dracula-text mb-2">
+        {projeto.titulo}
+      </h1>
 
       <ScrollReveal delay={300}>
         <div className="flex gap-3 mb-6">
@@ -67,6 +67,32 @@ export default async function ProjetoPage({ params }: Props) {
           )}
         </div>
       </ScrollReveal>
+
+      {projeto.viewCount > 0 && (
+        <ScrollReveal delay={350}>
+          <div className="flex gap-8 mb-8">
+            <div className="flex items-center gap-2 bg-dracula-surface px-4 py-3 rounded-lg border border-dracula-border">
+              <svg className="w-5 h-5 text-dracula-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+              <div>
+                <p className="text-lg font-bold text-dracula-text">{formatNum(projeto.viewCount)}</p>
+                <p className="text-xs text-dracula-muted">visualizações</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-2 bg-dracula-surface px-4 py-3 rounded-lg border border-dracula-border">
+              <svg className="w-5 h-5 text-dracula-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+              <div>
+                <p className="text-lg font-bold text-dracula-text">{formatNum(projeto.likeCount)}</p>
+                <p className="text-xs text-dracula-muted">likes</p>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
+      )}
 
       <ScrollReveal delay={400}>
         <p className="text-dracula-muted text-lg mb-8">{projeto.descricao}</p>

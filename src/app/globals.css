@@ -11,6 +11,7 @@
   --color-dracula-secondary: #8be9fd;
   --color-dracula-success: #50fa7b;
   --color-dracula-accent: #ff79c6;
+  --color-dracula-error: #ff5555;
   --font-sans: var(--font-inter);
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
@@ -20,6 +21,11 @@ body {
   background: var(--color-dracula-bg);
   color: var(--color-dracula-text);
   font-family: var(--font-sans);
+}
+
+*:focus-visible {
+  outline: 2px solid var(--color-dracula-primary);
+  outline-offset: 2px;
 }
 
 @keyframes animate-in {

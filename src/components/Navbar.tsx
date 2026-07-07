@@ -51,7 +51,7 @@ export default function Navbar() {
             href={locale === "pt" ? "/en" : "/pt"}
             className="text-xs text-dracula-muted hover:text-dracula-secondary transition-colors ml-4 border-l border-dracula-border pl-4"
           >
-            {locale === "pt" ? "EN" : "PT"}
+            {locale === "pt" ? "English" : "Português"}
           </Link>
         </nav>
 
@@ -94,7 +94,7 @@ export default function Navbar() {
               href={locale === "pt" ? "/en" : "/pt"}
               className="text-xs text-dracula-muted pt-2 border-t border-dracula-border"
             >
-              {locale === "pt" ? "English (EN)" : "Português (PT)"}
+              {locale === "pt" ? "English" : "Português"}
             </Link>
           </div>
         </div>

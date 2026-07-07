@@ -43,13 +43,17 @@ export default function ProjetosGrid({ projetos }: Props) {
         ))}
       </div>
 
-      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
-        {filtrados.map((projeto, i) => (
-          <ScrollReveal key={projeto.slug} delay={i * 80}>
-            <CardProjeto projeto={projeto} />
-          </ScrollReveal>
-        ))}
-      </div>
+      {filtrados.length === 0 ? (
+        <p className="mt-8 text-dracula-muted">{t("nenhum")}</p>
+      ) : (
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filtrados.map((projeto, i) => (
+            <ScrollReveal key={projeto.slug} delay={i * 80}>
+              <CardProjeto projeto={projeto} />
+            </ScrollReveal>
+          ))}
+        </div>
+      )}
     </>
   );
 }

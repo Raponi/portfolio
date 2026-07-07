@@ -1,11 +1,24 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "sobre" });
+  return {
+    title: `${t("title")} — Rogerio Barbosa`,
+  };
+}
 
 export default async function SobrePage() {
   const t = await getTranslations("sobre");
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-16">
-      <h1 className="text-3xl font-bold text-dracula-text mb-8">{t("title")}</h1>
+      <h1 className="animate-in text-3xl font-bold text-dracula-text mb-8">{t("title")}</h1>
 
       <div className="flex flex-col md:flex-row gap-8 mb-12">
         <div className="flex-1 space-y-4 text-dracula-text leading-relaxed">

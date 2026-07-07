@@ -47,6 +47,7 @@ export default function FormContato() {
           id="nome"
           name="nome"
           required
+          autoComplete="name"
           className="w-full px-4 py-2 bg-dracula-bg border border-dracula-border rounded-lg text-dracula-text focus:outline-none focus:border-dracula-primary transition-colors"
         />
       </div>
@@ -59,6 +60,7 @@ export default function FormContato() {
           id="email"
           name="email"
           required
+          autoComplete="email"
           className="w-full px-4 py-2 bg-dracula-bg border border-dracula-border rounded-lg text-dracula-text focus:outline-none focus:border-dracula-primary transition-colors"
         />
       </div>
@@ -77,7 +79,7 @@ export default function FormContato() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="px-6 py-3 bg-dracula-primary text-dracula-bg font-semibold rounded-lg hover:bg-dracula-secondary transition-colors disabled:opacity-50"
+        className="px-6 py-3 bg-dracula-primary text-dracula-bg font-semibold rounded-lg hover:bg-dracula-secondary transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {status === "loading" ? t("enviando") : t("enviar")}
       </button>
@@ -85,7 +87,7 @@ export default function FormContato() {
         <p className="text-dracula-success text-sm">{t("sucesso")}</p>
       )}
       {status === "error" && (
-        <p className="animate-shake text-red-400 text-sm">{t("erro")}</p>
+        <p className="animate-shake text-dracula-error text-sm">{t("erro")}</p>
       )}
     </form>
   );

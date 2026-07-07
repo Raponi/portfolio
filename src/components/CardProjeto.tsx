@@ -6,6 +6,12 @@ type Props = {
   projeto: Projeto;
 };
 
+function formatNum(n: number): string {
+  if (n >= 1_000_000) return (n / 1_000_000).toFixed(1).replace(".0", "") + "M";
+  if (n >= 1_000) return (n / 1_000).toFixed(1).replace(".0", "") + "K";
+  return n.toString();
+}
+
 export default function CardProjeto({ projeto }: Props) {
   return (
     <Link
@@ -17,6 +23,7 @@ export default function CardProjeto({ projeto }: Props) {
           src={projeto.thumbnail}
           alt={projeto.titulo}
           fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="object-cover group-hover:scale-105 transition-transform duration-300"
         />
         <div className="absolute top-2 left-2 flex gap-2">
@@ -38,6 +45,11 @@ export default function CardProjeto({ projeto }: Props) {
         <h3 className="font-semibold text-dracula-text group-hover:text-dracula-primary transition-colors line-clamp-2">
           {projeto.titulo}
         </h3>
+        {projeto.viewCount > 0 && (
+          <p className="text-xs text-dracula-muted mt-2">
+            {formatNum(projeto.viewCount)} visualizações
+          </p>
+        )}
       </div>
     </Link>
   );

@@ -43,6 +43,8 @@ function fallbackProjeto(src: ProjetoSource, index: number): Projeto {
     data: "",
     duracao: "",
     software: "DaVinci Resolve",
+    viewCount: 0,
+    likeCount: 0,
   };
 }
 
@@ -55,7 +57,7 @@ export async function getProjetos(): Promise<Projeto[]> {
 
   try {
     const res = await fetch(
-      `https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails&id=${ids}&key=${API_KEY}`,
+      `https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&id=${ids}&key=${API_KEY}`,
       { next: { revalidate: 3600 } }
     );
 
@@ -74,6 +76,7 @@ export async function getProjetos(): Promise<Projeto[]> {
           publishedAt: string;
         };
         contentDetails: { duration: string };
+        statistics?: { viewCount?: string; likeCount?: string };
       }>;
     } = await res.json();
 
@@ -93,6 +96,8 @@ export async function getProjetos(): Promise<Projeto[]> {
         data: formatDate(api.snippet.publishedAt),
         duracao: parseDuration(api.contentDetails.duration),
         software: "DaVinci Resolve",
+        viewCount: parseInt(api.statistics?.viewCount || "0"),
+        likeCount: parseInt(api.statistics?.likeCount || "0"),
       };
     });
   } catch {

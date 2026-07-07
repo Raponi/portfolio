@@ -1,6 +1,20 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import FormContato from "@/components/FormContato";
 import ScrollReveal from "@/components/ScrollReveal";
+
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "contato" });
+  return {
+    title: `${t("title")} — Rogerio Barbosa`,
+    description: t("desc"),
+  };
+}
 
 export default async function ContatoPage() {
   const t = await getTranslations("contato");
@@ -21,57 +35,58 @@ export default async function ContatoPage() {
         <ScrollReveal delay={100}>
           <div>
             <div className="bg-dracula-surface rounded-lg p-6 border border-dracula-border mb-6">
-            <h2 className="text-lg font-semibold text-dracula-primary mb-4">{t("redes")}</h2>
-            <div className="space-y-3">
+              <h2 className="text-lg font-semibold text-dracula-primary mb-4">{t("redes")}</h2>
+              <div className="space-y-3">
+                <a
+                  href="https://www.instagram.com/ekom.off_/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-dracula-muted hover:text-dracula-primary transition-colors"
+                >
+                  <span className="w-2 h-2 bg-dracula-accent rounded-full" />
+                  Instagram
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/rogeriobosa/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-dracula-muted hover:text-dracula-primary transition-colors"
+                >
+                  <span className="w-2 h-2 bg-dracula-secondary rounded-full" />
+                  LinkedIn
+                </a>
+                <a
+                  href="https://www.youtube.com/@TechBRCanal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-dracula-muted hover:text-dracula-primary transition-colors"
+                >
+                  <span className="w-2 h-2 bg-dracula-success rounded-full" />
+                  YouTube
+                </a>
+                <a
+                  href="https://www.behance.net/rogeriobcon"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-dracula-muted hover:text-dracula-primary transition-colors"
+                >
+                  <span className="w-2 h-2 bg-dracula-primary rounded-full" />
+                  Behance
+                </a>
+              </div>
+            </div>
+
+            <div className="bg-dracula-surface rounded-lg p-6 border border-dracula-border">
+              <h2 className="text-lg font-semibold text-dracula-primary mb-2">{t("email_direto")}</h2>
               <a
-                href="https://www.instagram.com/ekom.off_/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-dracula-muted hover:text-dracula-primary transition-colors"
+                href="mailto:rogeriobcon@gmail.com"
+                className="text-dracula-secondary hover:underline"
               >
-                <span className="w-2 h-2 bg-dracula-accent rounded-full" />
-                Instagram
-              </a>
-              <a
-                href="https://www.linkedin.com/in/rogeriobosa/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-dracula-muted hover:text-dracula-primary transition-colors"
-              >
-                <span className="w-2 h-2 bg-dracula-secondary rounded-full" />
-                LinkedIn
-              </a>
-              <a
-                href="https://www.youtube.com/@TechBRCanal"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-dracula-muted hover:text-dracula-primary transition-colors"
-              >
-                <span className="w-2 h-2 bg-dracula-success rounded-full" />
-                YouTube
-              </a>
-              <a
-                href="https://www.behance.net/rogeriobcon"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-dracula-muted hover:text-dracula-primary transition-colors"
-              >
-                <span className="w-2 h-2 bg-dracula-primary rounded-full" />
-                Behance
+                rogeriobcon@gmail.com
               </a>
             </div>
           </div>
-
-          <div className="bg-dracula-surface rounded-lg p-6 border border-dracula-border">
-            <h2 className="text-lg font-semibold text-dracula-primary mb-2">{t("email_direto")}</h2>
-            <a
-              href="mailto:rogeriobcon@gmail.com"
-              className="text-dracula-secondary hover:underline"
-            >
-              rogeriobcon@gmail.com
-            </a>
-          </div>
-        </div>
+        </ScrollReveal>
       </div>
     </div>
   );
