@@ -8,7 +8,7 @@
   },
   "home": {
     "title": "Rogerio Barbosa",
-    "subtitle": "Editor de Vídeo",
+    "subtitle": "Editor de Vídeo & Developer",
     "cta": "Ver Projetos",
     "hero_desc": "Transformo ideias em narrativas visuais. Edição de vídeo, motion graphics e color grading para conteúdo digital.",
     "destaques": "Projetos em Destaque"
@@ -39,9 +39,9 @@
   },
   "sobre": {
     "title": "Sobre",
-    "bio_1": "Editor de vídeo freelancer baseado em São Paulo, com experiência em conteúdo digital para YouTube, TikTok e plataformas de vídeo.",
-    "bio_2": "Trabalho com DaVinci Resolve (ferramenta principal), Adobe Premiere e After Effects, entregando edição que prioriza clareza narrativa, ritmo e comunicação visual eficiente.",
-    "bio_3": "Já editei para canais de tecnologia, conteúdo criativo e e-commerce. Cada projeto é uma oportunidade de contar uma história melhor.",
+    "bio_1": "Editor de vídeo freelancer baseado em São Paulo, com mais de 2 anos de experiência criando conteúdo visual de alto impacto para YouTube, TikTok e plataformas digitais. Fluente em inglês, atendo clientes nacionais e internacionais.",
+    "bio_2": "Meu diferencial é a interseção entre edição de vídeo e programação. Entendo de código, automação e ferramentas de IA — o que me permite criar fluxos de trabalho eficientes, explicar tecnologia em vídeo com propriedade e entregar resultados que vão além da edição tradicional.",
+    "bio_3": "Trabalho com DaVinci Resolve (ferramenta principal), Adobe Premiere e After Effects, priorizando clareza narrativa, ritmo e comunicação visual. Cada projeto é uma oportunidade de contar uma história melhor.",
     "stack_title": "Stack Técnico",
     "ferramentas": "Ferramentas",
     "experiencia": "Experiência",
@@ -49,8 +49,15 @@
     "exp_techbr_desc": "Edição semanal de reviews de tecnologia com jump cuts, motion graphics e ritmo dinâmico.",
     "exp_meyflower": "Editor de vídeo — MeyFlower (2023–Atual)",
     "exp_meyflower_desc": "Edição narrativa criativa com imagens de apoio e estruturação para retenção de público.",
+    "exp_dragrace": "Editor de Vídeo — Eai, tu visse? (2023)",
+    "exp_dragrace_desc": "Edição de alta qualidade para análises do programa Drag Race Brasil, incluindo correção de cor, tratamento de áudio e integração de elementos visuais.",
     "exp_mamae": "Editor de vídeo — Super Mamãe (2020–2022)",
-    "exp_mamae_desc": "Edição para e-commerce, campanhas Google Ads e conteúdo para redes sociais."
+    "exp_mamae_desc": "Edição para e-commerce, campanhas Google Ads e conteúdo para redes sociais.",
+    "como_trabalho": "Como Trabalho",
+    "como_trabalho_1": "Comunicação clara com clientes durante todo o processo.",
+    "como_trabalho_2": "Foco em eficiência: prazos cumpridos sem sacrificar qualidade.",
+    "como_trabalho_3": "Adaptação do estilo de edição ao objetivo de cada vídeo.",
+    "como_trabalho_4": "Atenção cuidadosa ao ritmo, à narrativa visual e à retenção do público."
   },
   "contato": {
     "title": "Contato",

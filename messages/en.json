@@ -8,7 +8,7 @@
   },
   "home": {
     "title": "Rogerio Barbosa",
-    "subtitle": "Video Editor",
+    "subtitle": "Video Editor & Developer",
     "cta": "View Projects",
     "hero_desc": "I turn ideas into visual narratives. Video editing, motion graphics, and color grading for digital content.",
     "destaques": "Featured Projects"
@@ -39,9 +39,9 @@
   },
   "sobre": {
     "title": "About",
-    "bio_1": "Freelance video editor based in São Paulo, experienced in digital content for YouTube, TikTok, and video platforms.",
-    "bio_2": "I work with DaVinci Resolve (primary tool), Adobe Premiere, and After Effects, delivering editing that prioritizes narrative clarity, pacing, and efficient visual communication.",
-    "bio_3": "I've edited for tech channels, creative content, and e-commerce. Every project is an opportunity to tell a better story.",
+    "bio_1": "Freelance video editor based in São Paulo, with over 2 years of experience creating high-impact visual content for YouTube, TikTok, and digital platforms. Fluent in English, serving national and international clients.",
+    "bio_2": "My edge is the intersection of video editing and programming. I understand code, automation, and AI tools — enabling efficient workflows, authentic tech storytelling, and results beyond traditional editing.",
+    "bio_3": "I work with DaVinci Resolve (primary), Adobe Premiere, and After Effects, prioritizing narrative clarity, pacing, and visual communication. Every project is a chance to tell a better story.",
     "stack_title": "Tech Stack",
     "ferramentas": "Tools",
     "experiencia": "Experience",
@@ -49,8 +49,15 @@
     "exp_techbr_desc": "Weekly tech review editing with jump cuts, motion graphics, and dynamic pacing.",
     "exp_meyflower": "Video Editor — MeyFlower (2023–Present)",
     "exp_meyflower_desc": "Creative narrative editing with supporting imagery and audience retention structuring.",
+    "exp_dragrace": "Video Editor — Eai, tu visse? (2023)",
+    "exp_dragrace_desc": "High-quality editing for Drag Race Brasil analysis videos, including color correction, audio treatment, and visual element integration.",
     "exp_mamae": "Video Editor — Super Mamãe (2020–2022)",
-    "exp_mamae_desc": "E-commerce editing, Google Ads campaigns, and social media content."
+    "exp_mamae_desc": "E-commerce editing, Google Ads campaigns, and social media content.",
+    "como_trabalho": "How I Work",
+    "como_trabalho_1": "Clear communication with clients throughout the process.",
+    "como_trabalho_2": "Efficiency-focused: deadlines met without sacrificing quality.",
+    "como_trabalho_3": "Editing style adapted to each video's goal and audience.",
+    "como_trabalho_4": "Careful attention to pacing, visual narrative, and audience retention."
   },
   "contato": {
     "title": "Contact",

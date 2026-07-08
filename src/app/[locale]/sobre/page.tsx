@@ -94,10 +94,36 @@ export default async function SobrePage() {
             <p className="text-dracula-muted text-sm">{t("exp_meyflower_desc")}</p>
           </div>
           <div>
+            <h3 className="font-semibold text-dracula-text">{t("exp_dragrace")}</h3>
+            <p className="text-dracula-muted text-sm">{t("exp_dragrace_desc")}</p>
+          </div>
+          <div>
             <h3 className="font-semibold text-dracula-text">{t("exp_mamae")}</h3>
             <p className="text-dracula-muted text-sm">{t("exp_mamae_desc")}</p>
           </div>
         </div>
+      </div>
+
+      <div className="bg-dracula-surface rounded-lg p-6 border border-dracula-border mt-8">
+        <h2 className="text-lg font-semibold text-dracula-primary mb-4">{t("como_trabalho")}</h2>
+        <ul className="space-y-3 text-dracula-text">
+          <li className="flex items-start gap-3">
+            <span className="w-1.5 h-1.5 bg-dracula-secondary rounded-full mt-2 shrink-0" />
+            {t("como_trabalho_1")}
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="w-1.5 h-1.5 bg-dracula-accent rounded-full mt-2 shrink-0" />
+            {t("como_trabalho_2")}
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="w-1.5 h-1.5 bg-dracula-success rounded-full mt-2 shrink-0" />
+            {t("como_trabalho_3")}
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="w-1.5 h-1.5 bg-dracula-primary rounded-full mt-2 shrink-0" />
+            {t("como_trabalho_4")}
+          </li>
+        </ul>
       </div>
     </div>
   );
