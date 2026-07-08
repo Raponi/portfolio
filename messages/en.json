@@ -8,14 +8,15 @@
   },
   "home": {
     "title": "Rogerio Barbosa",
+    "tagline": "Editing that keeps viewers watching",
     "subtitle": "Video Editor & Developer",
     "cta": "View Projects",
-    "hero_desc": "I turn ideas into visual narratives. Video editing, motion graphics, and color grading for digital content.",
+    "hero_desc": "Your raw footage becomes a video that hooks from the first second. Narrative editing, motion graphics, polished audio — no fluff, no filler.",
     "destaques": "Featured Projects"
   },
   "projetos": {
     "title": "Projects",
-    "desc": "Selected video editing work.",
+    "desc": "A few projects I've worked on. Different styles, different vibes — take a look.",
     "todos": "All",
     "tech": "Tech",
     "creative": "Creative",
@@ -32,10 +33,10 @@
   "servicos": {
     "title": "Services",
     "desc": "Complete video editing solutions for digital content.",
-    "edicao": { "title": "Video Editing", "desc": "Narrative editing focused on pacing, clarity, and audience retention. From assembly to final delivery." },
-    "motion": { "title": "Motion Graphics", "desc": "Animations, dynamic text, and visual elements to add personality to your content." },
-    "color": { "title": "Color Grading", "desc": "Color correction and cinematic grading. Professional look for any project." },
-    "finalizacao": { "title": "Audio Post-Production", "desc": "Mixing, voice treatment, SFX, and fine-tuning for clean, professional audio." }
+    "edicao": { "title": "Video Editing", "desc": "Your raw recording becomes publishable content. Clean cuts, solid pacing, smart assembly. From shoot to upload." },
+    "motion": { "title": "Motion Graphics", "desc": "Animated text, keywords, graphics that explain without clutter. The extra polish that makes your video feel premium." },
+    "color": { "title": "Color Grading", "desc": "Color correction + cinematic look. Your channel stays consistent and professional across every video." },
+    "finalizacao": { "title": "Audio Post-Production", "desc": "Clean voice, on-point soundtrack, SFX at the right moment. Audio that doesn't tire — because viewers won't forgive bad sound." }
   },
   "sobre": {
     "title": "About",
@@ -57,20 +58,23 @@
     "como_trabalho_1": "Clear communication with clients throughout the process.",
     "como_trabalho_2": "Efficiency-focused: deadlines met without sacrificing quality.",
     "como_trabalho_3": "Editing style adapted to each video's goal and audience.",
-    "como_trabalho_4": "Careful attention to pacing, visual narrative, and audience retention."
+    "como_trabalho_4": "Careful attention to pacing, visual narrative, and audience retention.",
+    "cta_final": "Like what you saw? Want a quote? Just hit me up.",
+    "cta_final_btn": "Get in Touch"
   },
   "contato": {
     "title": "Contact",
-    "desc": "Let's work together? Send me a message.",
+    "desc": "Got a project or channel that needs editing? Tell me a bit about it and I'll get back to you within 24h.",
     "form_title": "Send a Message",
     "nome": "Name",
     "email": "Email",
     "mensagem": "Message",
+    "mensagem_placeholder": "My channel is about [niche]. I publish [X] videos per month. I need editing for...",
     "enviar": "Send",
     "enviando": "Sending...",
-    "sucesso": "Message sent successfully!",
-    "erro": "Error sending. Please try again.",
-    "email_direto": "Or send me an email directly:",
+    "sucesso": "Message received. I'll read it and reply within 24h. Meanwhile, check out the projects.",
+    "erro": "Something went wrong. Try again or send me an email directly.",
+    "email_direto": "Prefer email? Send direct:",
     "redes": "Social Media"
   },
   "footer": {

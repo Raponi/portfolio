@@ -73,7 +73,8 @@ export default function FormContato() {
           name="mensagem"
           required
           rows={5}
-          className="w-full px-4 py-2 bg-dracula-bg border border-dracula-border rounded-lg text-dracula-text focus:outline-none focus:border-dracula-primary transition-colors resize-none"
+          placeholder={t("mensagem_placeholder")}
+          className="w-full px-4 py-2 bg-dracula-bg border border-dracula-border rounded-lg text-dracula-text focus:outline-none focus:border-dracula-primary transition-colors resize-none placeholder:text-dracula-muted placeholder:text-sm"
         />
       </div>
       <button

@@ -8,14 +8,15 @@
   },
   "home": {
     "title": "Rogerio Barbosa",
+    "tagline": "Edição que segura o espectador",
     "subtitle": "Editor de Vídeo & Developer",
     "cta": "Ver Projetos",
-    "hero_desc": "Transformo ideias em narrativas visuais. Edição de vídeo, motion graphics e color grading para conteúdo digital.",
+    "hero_desc": "Seu raw footage vira um vídeo que prende do primeiro ao último segundo. Edição narrativa, motion graphics e áudio tratado — sem ghosting, sem enrolação.",
     "destaques": "Projetos em Destaque"
   },
   "projetos": {
     "title": "Projetos",
-    "desc": "Trabalhos selecionados de edição de vídeo.",
+    "desc": "Alguns trabalhos que fiz. Cada um com um estilo diferente — dá uma olhada.",
     "todos": "Todos",
     "tech": "Tech",
     "creative": "Creative",
@@ -32,10 +33,10 @@
   "servicos": {
     "title": "Serviços",
     "desc": "Soluções completas de edição de vídeo para conteúdo digital.",
-    "edicao": { "title": "Edição de Vídeo", "desc": "Edição narrativa com foco em ritmo, clareza e retenção de audiência. Desde decupagem até finalização." },
-    "motion": { "title": "Motion Graphics", "desc": "Animações, textos dinâmicos e elementos visuais para dar personalidade ao seu conteúdo." },
-    "color": { "title": "Color Grading", "desc": "Correção e harmonização de cores com estilo cinematográfico. Look profissional para qualquer projeto." },
-    "finalizacao": { "title": "Finalização & Áudio", "desc": "Mixagem, tratamento de voz, SFX e ajustes finos para um áudio limpo e profissional." }
+    "edicao": { "title": "Edição de Vídeo", "desc": "Seu vídeo gravado vira conteúdo pronto. Cortes precisos, ritmo que segura, decupagem inteligente. Do raw ao upload." },
+    "motion": { "title": "Motion Graphics", "desc": "Texto animado, palavras-chave, gráficos que explicam sem encher lingüiça. O toque extra que faz seu vídeo parecer premium." },
+    "color": { "title": "Color Grading", "desc": "Correção de cor + look cinematográfico. Seu canal com visual consistente e profissional em cada vídeo." },
+    "finalizacao": { "title": "Finalização & Áudio", "desc": "Voz limpa, trilha no ponto, SFX na hora certa. Áudio que não cansa — porque espectador não perdoa áudio ruim." }
   },
   "sobre": {
     "title": "Sobre",
@@ -57,20 +58,23 @@
     "como_trabalho_1": "Comunicação clara com clientes durante todo o processo.",
     "como_trabalho_2": "Foco em eficiência: prazos cumpridos sem sacrificar qualidade.",
     "como_trabalho_3": "Adaptação do estilo de edição ao objetivo de cada vídeo.",
-    "como_trabalho_4": "Atenção cuidadosa ao ritmo, à narrativa visual e à retenção do público."
+    "como_trabalho_4": "Atenção cuidadosa ao ritmo, à narrativa visual e à retenção do público.",
+    "cta_final": "Gostou do que viu? Quer um orçamento? É só chamar.",
+    "cta_final_btn": "Entrar em Contato"
   },
   "contato": {
     "title": "Contato",
-    "desc": "Vamos trabalhar juntos? Me envie uma mensagem.",
+    "desc": "Tem um projeto ou canal que precisa de edição? Me conta o básico e respondo em até 24h.",
     "form_title": "Enviar Mensagem",
     "nome": "Nome",
     "email": "Email",
     "mensagem": "Mensagem",
+    "mensagem_placeholder": "Meu canal é sobre [nicho]. Faço [X] vídeos por mês. Preciso de edição para...",
     "enviar": "Enviar",
     "enviando": "Enviando...",
-    "sucesso": "Mensagem enviada com sucesso!",
-    "erro": "Erro ao enviar. Tente novamente.",
-    "email_direto": "Ou me envie um email direto:",
+    "sucesso": "Mensagem recebida. Vou ler e responder em até 24h. Enquanto isso, dá uma olhada nos projetos.",
+    "erro": "Erro ao enviar. Tenta de novo ou me manda um email direto.",
+    "email_direto": "Prefere email? Manda direto:",
     "redes": "Redes Sociais"
   },
   "footer": {

@@ -14,9 +14,12 @@ export default function Hero() {
   return (
     <section className="w-full max-w-6xl mx-auto px-4 pt-20 pb-12 flex flex-col lg:flex-row items-center gap-12">
       <div className="flex-1 text-center lg:text-left">
-        <h1 className="animate-in text-4xl lg:text-5xl font-bold text-dracula-text mb-3">
+        <h1 className="animate-in text-4xl lg:text-5xl font-bold text-dracula-text mb-2">
           {t("title")}
         </h1>
+        <p className="animate-in animate-in-d1 text-lg text-dracula-accent font-medium mb-1">
+          {t("tagline")}
+        </p>
         <p className="animate-in animate-in-d1 text-xl text-dracula-primary font-medium mb-4">
           {t("subtitle")}
         </p>

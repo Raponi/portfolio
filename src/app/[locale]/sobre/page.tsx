@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -124,6 +125,16 @@ export default async function SobrePage() {
             {t("como_trabalho_4")}
           </li>
         </ul>
+      </div>
+
+      <div className="text-center mt-12">
+        <p className="text-dracula-text text-lg mb-4">{t("cta_final")}</p>
+        <Link
+          href="/contato"
+          className="inline-block px-6 py-3 bg-dracula-primary text-dracula-bg font-semibold rounded-lg hover:bg-dracula-secondary transition-colors"
+        >
+          {t("cta_final_btn")}
+        </Link>
       </div>
     </div>
   );
