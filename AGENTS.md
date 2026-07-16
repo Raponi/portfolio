@@ -9,6 +9,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - `npm run dev` — dev server
 - `npm run build` — production build (runs TS typecheck implicitly)
 - `npm run lint` — ESLint v9 flat config (`eslint.config.mjs`)
+- `git push` does NOT trigger Vercel auto-deploy (team SSO blocks webhook). Always run `npx vercel --prod` after committing to publish changes.
 - No test infra exists (no jest, vitest, playwright)
 
 # Architecture
@@ -21,6 +22,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - API: `POST /api/contact` — sends email via Resend
 - `src/app/layout.tsx` is a minimal shell (no `<html>`/`<body>` tags); the real layout with Navbar/Footer is `[locale]/layout.tsx`
 - No route groups, no loading/error boundaries, no layouts beyond `[locale]/layout.tsx`
+- **next-intl server component pitfall**: `t.raw()` does not reliably return arrays of objects from `getTranslations` in server components. Use flat numbered keys instead (e.g., `precos_linha_1_faixa`, `precos_linha_1_preco`).
 
 # Components
 
