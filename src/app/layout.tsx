@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Rogerio Barbosa — Video Editor & Developer",
+  title: "Rogerio Barbosa — Video Editor",
   description:
-    "Portfólio de edição de vídeo e desenvolvimento. Transformo ideias em narrativas visuais.",
+    "Edição de vídeo profissional para criadores de conteúdo digital. Transformo raw footage em vídeos prontos para publicar.",
 };
 
 export default function RootLayout({

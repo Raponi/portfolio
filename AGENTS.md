@@ -19,6 +19,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - Use `@/i18n/navigation` `Link` + `redirect` (not `next/link`) for locale-aware routing
 - Pages: Home (`/`), Projetos (`/projetos` + `/[slug]`), Servicos, Sobre, Contato
 - API: `POST /api/contact` — sends email via Resend
+- `src/app/layout.tsx` is a minimal shell (no `<html>`/`<body>` tags); the real layout with Navbar/Footer is `[locale]/layout.tsx`
 - No route groups, no loading/error boundaries, no layouts beyond `[locale]/layout.tsx`
 
 # Components
@@ -31,6 +32,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - `src/data/projetos-source.ts` — static YouTube IDs with `categoria`/`slug`
 - Enriched at request time via YouTube API in `src/lib/get-projetos.ts` (ISR with `revalidate: 3600`)
 - Graceful fallback when `YOUTUBE_API_KEY` missing: static thumbnails, empty stats
+- `src/lib/youtube.ts` is **dead code** (channel-level search helpers, never imported); only `get-projetos.ts` is wired to pages
 
 # Env
 
@@ -46,3 +48,4 @@ Both optional — missing keys degrade gracefully.
 - Dracula theme: CSS custom properties in `src/app/globals.css` (pattern: `--color-dracula-*`)
 - `.env*` gitignored. `next-env.d.ts` exists in repo despite being in `.gitignore`
 - Vercel-deployed: `.vercel/repo.json` has project/org IDs
+- `next.config.ts` `images.remotePatterns` only allows `i.ytimg.com` — new `next/image` hosts must be added here

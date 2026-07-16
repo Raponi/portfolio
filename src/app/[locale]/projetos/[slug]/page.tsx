@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { getProjeto } from "@/lib/get-projetos";
 import VideoPlayer from "@/components/VideoPlayer";
 import ScrollReveal from "@/components/ScrollReveal";
+import JsonLd from "@/components/JsonLd";
 
 type Props = {
   params: Promise<{ slug: string; locale: string }>;
@@ -34,10 +35,28 @@ export default async function ProjetoPage({ params }: Props) {
   const projeto = await getProjeto(slug);
   if (!projeto) notFound();
 
+  const videoSchema = {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: projeto.titulo,
+    description: projeto.descricao,
+    thumbnailUrl: projeto.thumbnail,
+    duration: projeto.duracao ? `PT${projeto.duracao.replace("h", "H").replace(" min", "M").replace("s", "S")}` : undefined,
+    uploadDate: projeto.data || undefined,
+    interactionStatistic: projeto.viewCount > 0 ? [
+      {
+        "@type": "InteractionCounter",
+        interactionType: "WatchAction",
+        userInteractionCount: projeto.viewCount,
+      },
+    ] : undefined,
+  };
+
   return (
-    <div className="max-w-4xl mx-auto px-4 py-16">
-      <Link
-        href="/projetos"
+      <div className="max-w-4xl mx-auto px-4 py-16">
+        <JsonLd data={videoSchema} />
+        <Link
+          href="/projetos"
         className="animate-in inline-block text-dracula-muted hover:text-dracula-primary transition-colors mb-8"
       >
         {t("voltar")}
