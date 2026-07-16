@@ -14,7 +14,7 @@
     "hero_desc": "Your raw footage becomes a published video with narrative editing, color correction, motion graphics, and polished audio. From cut to upload, every step focused on delivering content that keeps viewers watching.",
     "destaques": "Featured Projects",
     "stat_views": "total views",
-    "stat_projetos": "projects edited",
+    "stat_projetos": "featured projects",
     "stat_likes": "total likes"
   },
   "projetos": {
@@ -42,6 +42,8 @@
     "finalizacao": { "title": "Audio Post-Production", "desc": "Clean leveled voice, on-point soundtrack, sound effects at the right moment. Audio that keeps viewers comfortable, because bad sound loses audiences." },
     "precos_title": "Investment",
     "precos_desc": "Every project has its own scope, but here is a starting reference based on finished video length.",
+    "precos_col_duracao": "Duration",
+    "precos_col_preco": "Investment",
     "precos_linha_1_faixa": "Videos up to 10 min",
     "precos_linha_1_preco": "from R$ 240",
     "precos_linha_2_faixa": "Videos up to 20 min",

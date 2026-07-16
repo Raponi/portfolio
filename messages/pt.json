@@ -14,7 +14,7 @@
     "hero_desc": "Seu raw footage vira um vídeo publicado com edição narrativa, correção de cor, motion graphics e áudio tratado. Do corte ao upload, cada etapa pensada para entregar um conteúdo que prende do primeiro ao último segundo.",
     "destaques": "Projetos em Destaque",
     "stat_views": "visualizações acumuladas",
-    "stat_projetos": "projetos editados",
+    "stat_projetos": "projetos em destaque",
     "stat_likes": "likes acumulados"
   },
   "projetos": {
@@ -42,6 +42,8 @@
     "finalizacao": { "title": "Finalização & Áudio", "desc": "Voz limpa e nivelada, trilha sonora no ponto, efeitos sonoros na medida certa. Áudio que não cansa, porque espectador não perdoa áudio ruim." },
     "precos_title": "Investimento",
     "precos_desc": "Cada projeto tem seu escopo, mas a referência inicial é por faixa de duração do vídeo finalizado.",
+    "precos_col_duracao": "Duração",
+    "precos_col_preco": "Investimento",
     "precos_linha_1_faixa": "Vídeos de até 10 min",
     "precos_linha_1_preco": "a partir de R$ 240",
     "precos_linha_2_faixa": "Vídeos de até 20 min",

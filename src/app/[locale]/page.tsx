@@ -17,30 +17,35 @@ export default async function HomePage() {
 
   const totalViews = projetos.reduce((acc, p) => acc + (p.viewCount ?? 0), 0);
   const totalLikes = projetos.reduce((acc, p) => acc + (p.likeCount ?? 0), 0);
+  const hasStats = totalViews > 0;
 
   return (
     <div className="flex flex-col items-center">
       <Hero />
       <section className="w-full max-w-6xl px-4 py-16">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-16">
-          <ScrollReveal delay={0}>
-            <div className="bg-dracula-surface rounded-lg p-6 border border-dracula-border text-center">
-              <p className="text-3xl font-bold text-dracula-primary">{formatarNumero(totalViews)}</p>
-              <p className="text-dracula-muted text-sm mt-1">{t("stat_views")}</p>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal delay={100}>
+          {hasStats && (
+            <ScrollReveal delay={0}>
+              <div className="bg-dracula-surface rounded-lg p-6 border border-dracula-border text-center">
+                <p className="text-3xl font-bold text-dracula-primary">{formatarNumero(totalViews)}</p>
+                <p className="text-dracula-muted text-sm mt-1">{t("stat_views")}</p>
+              </div>
+            </ScrollReveal>
+          )}
+          <ScrollReveal delay={hasStats ? 100 : 0}>
             <div className="bg-dracula-surface rounded-lg p-6 border border-dracula-border text-center">
               <p className="text-3xl font-bold text-dracula-primary">{projetos.length}</p>
               <p className="text-dracula-muted text-sm mt-1">{t("stat_projetos")}</p>
             </div>
           </ScrollReveal>
-          <ScrollReveal delay={200}>
-            <div className="bg-dracula-surface rounded-lg p-6 border border-dracula-border text-center">
-              <p className="text-3xl font-bold text-dracula-primary">{formatarNumero(totalLikes)}</p>
-              <p className="text-dracula-muted text-sm mt-1">{t("stat_likes")}</p>
-            </div>
-          </ScrollReveal>
+          {hasStats && (
+            <ScrollReveal delay={200}>
+              <div className="bg-dracula-surface rounded-lg p-6 border border-dracula-border text-center">
+                <p className="text-3xl font-bold text-dracula-primary">{formatarNumero(totalLikes)}</p>
+                <p className="text-dracula-muted text-sm mt-1">{t("stat_likes")}</p>
+              </div>
+            </ScrollReveal>
+          )}
         </div>
       </section>
       <section className="w-full max-w-6xl px-4 py-16 pt-0">

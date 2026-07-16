@@ -60,8 +60,8 @@ export default async function ServicosPage({
             <table className="w-full text-left">
               <thead>
                 <tr className="border-b border-dracula-border">
-                  <th className="pb-3 text-dracula-text font-semibold">Duração</th>
-                  <th className="pb-3 text-dracula-text font-semibold text-right">Investimento</th>
+                  <th className="pb-3 text-dracula-text font-semibold">{t("precos_col_duracao")}</th>
+                  <th className="pb-3 text-dracula-text font-semibold text-right">{t("precos_col_preco")}</th>
                 </tr>
               </thead>
               <tbody>
