@@ -82,6 +82,11 @@ export default async function ServicosPage({
 
           <p className="text-dracula-muted text-sm mt-6">{t("precos_nota")}</p>
 
+          <div className="mt-6 p-4 bg-dracula-accent/10 border border-dracula-accent/30 rounded-lg text-center">
+            <p className="font-semibold text-dracula-accent">{t("precos_teste")}</p>
+            <p className="text-dracula-muted text-sm mt-1">{t("precos_teste_desc")}</p>
+          </div>
+
           <div className="mt-8 text-center">
             <Link
               href="/contato"

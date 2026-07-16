@@ -54,7 +54,9 @@
     "precos_linha_4_preco": "a partir de R$ 840",
     "precos_linha_5_faixa": "Projetos maiores ou cursos",
     "precos_linha_5_preco": "Sob consulta",
-    "precos_nota": "Valores para canais de porte médio. Vídeos com motion graphics ou complexidade adicional podem ter acréscimo. Primeiro vídeo é cortesia, sem risco para você testar o trabalho."
+    "precos_nota": "Valores para canais de porte médio. Vídeos com motion graphics ou complexidade adicional podem ter acréscimo.",
+    "precos_teste": "Teste Grátis",
+    "precos_teste_desc": "Primeiro vídeo é cortesia. Você avalia ritmo, comunicação e qualidade sem risco. Se não servir, não paga nada."
   },
   "sobre": {
     "title": "Sobre",
@@ -73,10 +75,10 @@
     "exp_mamae": "Editor de Vídeo, Super Mamãe (2020-2022)",
     "exp_mamae_desc": "Edição para e-commerce, campanhas Google Ads e conteúdo para redes sociais.",
     "como_trabalho": "Como Trabalho",
-    "como_trabalho_1": "Comunicação clara com o cliente em todas as etapas do processo.",
-    "como_trabalho_2": "Prazos cumpridos sem comprometer a qualidade da entrega.",
-    "como_trabalho_3": "Estilo de edição adaptado ao objetivo de cada vídeo e ao perfil da audiência.",
-    "como_trabalho_4": "Atenção a ritmo, narrativa visual e retenção como prioridades da edição.",
+    "como_trabalho_1": "Cada faixa de duração tem prazo definido: até 10 min em 1 dia útil, até 20 min em 2 dias, até 60 min em 3 dias. Sem prazo genérico, sem atraso escondido.",
+    "como_trabalho_2": "Scripts próprios para extração de legendas, organização de mídia e renderização em lote. Menos tempo em tarefas repetitivas significa prazo menor e preço mais justo.",
+    "como_trabalho_3": "Entrego o projeto editável do DaVinci Resolve junto com o vídeo final. Você pode revisar, ajustar ou reutilizar sem começar do zero.",
+    "como_trabalho_4": "Editei tech reviews, conteúdo narrativo de anime, e-commerce e Google Ads. Cada nicho tem seu ritmo, e eu sei qual usar.",
     "cta_final": "Gostou do que viu? Vamos conversar sobre seu projeto.",
     "cta_final_btn": "Solicitar Orçamento"
   },

@@ -54,7 +54,9 @@
     "precos_linha_4_preco": "from R$ 840",
     "precos_linha_5_faixa": "Larger projects or courses",
     "precos_linha_5_preco": "Upon request",
-    "precos_nota": "Prices for mid-size channels. Videos with motion graphics or additional complexity may incur extra. First video is complimentary, no risk to try the work."
+    "precos_nota": "Prices for mid-size channels. Videos with motion graphics or additional complexity may incur extra.",
+    "precos_teste": "Free Trial",
+    "precos_teste_desc": "Your first video is complimentary. Evaluate pacing, communication, and quality with no risk. If it is not a fit, you pay nothing."
   },
   "sobre": {
     "title": "About",
@@ -73,10 +75,10 @@
     "exp_mamae": "Video Editor, Super Mamãe (2020-2022)",
     "exp_mamae_desc": "E-commerce editing, Google Ads campaigns, and social media content.",
     "como_trabalho": "How I Work",
-    "como_trabalho_1": "Clear communication with clients at every stage of the process.",
-    "como_trabalho_2": "Deadlines met without compromising delivery quality.",
-    "como_trabalho_3": "Editing style adapted to each video's goal and audience profile.",
-    "como_trabalho_4": "Pacing, visual narrative, and retention treated as core editing priorities.",
+    "como_trabalho_1": "Every duration range has a clear deadline: up to 10 min in 1 business day, up to 20 min in 2 days, up to 60 min in 3 days. No vague timelines, no hidden delays.",
+    "como_trabalho_2": "Custom scripts for subtitle extraction, media organization, and batch rendering. Less time on repetitive tasks means faster turnaround and fairer pricing.",
+    "como_trabalho_3": "I deliver the editable DaVinci Resolve project alongside the final video. You can review, tweak, or repurpose without starting from scratch.",
+    "como_trabalho_4": "I have edited tech reviews, anime narrative content, e-commerce videos, and Google Ads. Each niche has its own pace, and I know which one to use.",
     "cta_final": "Like what you saw? Let's talk about your project.",
     "cta_final_btn": "Request a Quote"
   },
