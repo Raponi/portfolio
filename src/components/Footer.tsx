@@ -27,14 +27,6 @@ export default function Footer() {
             Instagram
           </a>
           <a
-            href="https://www.youtube.com/@TechBRCanal"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-dracula-muted hover:text-dracula-primary transition-colors"
-          >
-            YouTube
-          </a>
-          <a
             href="https://www.behance.net/rogeriobcon"
             target="_blank"
             rel="noopener noreferrer"
